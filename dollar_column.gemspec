@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = "dollar_column"
-  s.version     = "1.0.2"
+  s.version     = "1.0.3"
   s.date        = "2013-05-24"
   s.summary     = "Helper for dealing with money amounts."
   s.description = "Provides helper methods so you can store dollar amounts in cents as integers (or floats if you need to store fractional pennies) but still do your operations in dollars"

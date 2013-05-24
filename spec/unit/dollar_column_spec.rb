@@ -53,6 +53,19 @@ describe ActiveRecord::DollarColumn do
     test_object.amount_in_cents.must_equal 452
   end
   
+  it "accepts a float for input" do
+    DollarColumnTestCase.instance_eval do
+      dollar_column :amount
+      
+      attr_accessor :amount_in_cents
+    end
+    
+    test_object = DollarColumnTestCase.new
+    test_object.amount = 4.52
+    
+    test_object.amount_in_cents.must_equal 452
+  end
+  
   it "accepts fractional pennies too" do
     DollarColumnTestCase.instance_eval do
       dollar_column :amount

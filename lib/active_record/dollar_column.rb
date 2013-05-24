@@ -33,7 +33,7 @@ module ActiveRecord # :nodoc:
         end
         
         define_method("#{attr_name}=") do |value|
-          write_attribute("#{attr_name}_in_cents", (BigDecimal.new(value) * 100).to_f)
+          write_attribute("#{attr_name}_in_cents", (BigDecimal.new(value.to_s) * 100).to_f)
         end
       end
     end
