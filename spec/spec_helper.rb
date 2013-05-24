@@ -7,7 +7,7 @@ module ActiveRecord
   end
 end
 
-require File.expand_path(File.dirname(__FILE__) + "/../init")
+require File.expand_path(File.dirname(__FILE__) + "/../lib/dollar_column")
 
 def fixture_path(name)
   File.expand_path(File.join(File.dirname(__FILE__), "fixtures", name))

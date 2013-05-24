@@ -39,3 +39,7 @@ module ActiveRecord # :nodoc:
     end
   end
 end
+
+ActiveRecord::Base.class_eval do
+  include ActiveRecord::DollarColumn
+end
